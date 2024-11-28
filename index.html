@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Imagem com Título e Cards</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+        img {
+            width: 20%; 
+            margin-top: 20px;
+        }
+        h1 {
+            margin-top: 10px;
+            font-size: 24px;
+        }
+        h3 {
+            margin-top: 5px;
+            font-size: 20px;
+        }
+        .cards-container {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 30px;
+        }
+        .card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 20px;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .card p {
+            font-size: 14px;
+            color: #555;
+            display: none;
+        }
+        .projects-container {
+            margin-top: 50px;
+            width: 80%;
+        }
+        .project {
+            margin-bottom: 20px;
+        }
+        .project h4 {
+            font-size: 22px;
+        }
+        .project a {
+            font-size: 18px;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .project a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <img src="./diegoimagem.jpg" alt="DIEGO BENTO MARINHO">
+    <h1>DIEGO BENTO MARINHO</h1>
+
+    <div class="cards-container">
+        <div class="card" onclick="toggleText(this)">
+            <h2>Sobre mim</h2>
+            <p>Meu nome é Diego Marinho e tenho 18 anos. Atualmente, estou cursando o Técnico em Desenvolvimento de Sistemas, onde desenvolvo habilidades e conhecimentos essenciais para atuar na área de tecnologia. Durante a minha formação, tenho me dedicado a várias disciplinas que ampliam minha visão e competência no campo da programação e do desenvolvimento de soluções inovadoras.</p>
+        </div>
+        <div class="card" onclick="toggleText(this)">
+            <h2>Matérias Feitas</h2>
+            <p>Empreendedorismo e Inovação Sustentável, Fundamentos de Programação, Banco de Dados, Administração de Websites, Qualidade de Software. Cada uma dessas matérias tem me proporcionado conhecimento para desenvolver e aprimorar minhas habilidades como desenvolvedor.</p>
+        </div>
+        <div class="card" onclick="toggleText(this)">
+            <h2>Hobbies</h2>
+            <p>No meu tempo livre, gosto de assistir séries e filmes, além de sair para passeios com a minha família. Também resido em Belo Horizonte e possuo CNH A, o que me dá mais liberdade e independência.</p>
+        </div>
+    </div>
+
+    <div class="projects-container">
+        <div class="project">
+            <h4>Projeto 1: <span>Site Maio Amarelo</span></h4>
+            <a href="https://alwayslearning999.github.io/maioamarelo.github.io/" target="_blank">Site</a><br>
+            <a href="https://github.com/alwayslearning999/maioamarelo.github.io" target="_blank">GitHub Repositório</a>
+        </div>
+        <div class="project">
+            <h4>Projeto 2: <span>Outro Projeto</span></h4>
+            <a href="https://www.outroProjeto.com" target="_blank">Clique aqui para acessar outro projeto</a>
+        </div>
+    </div>
+
+    <script>
+        function toggleText(card) {
+            var text = card.querySelector("p");
+            if (text.style.display === "none" || text.style.display === "") {
+                text.style.display = "block";
+            } else {
+                text.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
